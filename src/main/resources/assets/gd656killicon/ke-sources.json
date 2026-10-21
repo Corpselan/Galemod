@@ -1,0 +1,264 @@
+{
+  "page": "https://kingdomarchives.com/killbanners",
+  "skins": [
+    {
+      "id": "00038",
+      "skin": "cyrax",
+      "name": "CYRAX",
+      "source_zip_folder": "D:/Download/ke",
+      "source_page": "https://kingdomarchives.com/killbanners?banner=cyrax",
+      "layers": {
+        "data-frame": "https://kingdomarchives.com/uploads/killbanners/cyrax/cyrax_frame.png",
+        "data-pip": "https://kingdomarchives.com/uploads/killbanners/cyrax/cyrax_pip.png",
+        "data-emblem": "https://kingdomarchives.com/uploads/killbanners/cyrax/cyrax_emblem.png",
+        "data-headshot": "https://kingdomarchives.com/uploads/killbanners/default/Default_HS.png"
+      },
+      "recovered_pngs": [
+        "cyrax_3_kills.png",
+        "cyrax_4_kills.png",
+        "cyrax_5_kills.png"
+      ],
+      "sound_tiers": 6,
+      "animation": "GD656 ValorantIconRenderer with separate per-skin motion profiles; approximated from Riot upgrade videos",
+      "motion": {
+        "icon_entry_offset_y": -8,
+        "icon_entry_duration": 0.1,
+        "icon_display_duration": 2.8,
+        "frame_entry_delay": 0.015,
+        "frame_entry_duration": 0.14,
+        "frame_entry_initial_scale": 0.94,
+        "emblem_entry_duration": 0.16,
+        "emblem_entry_initial_scale": 1.2,
+        "bar_entry_duration": 0.14,
+        "bar_bounce_distance": 10,
+        "bar_bounce_peak": 0.14,
+        "bar_bounce_hold": 0.21,
+        "bar_bounce_end": 0.5,
+        "bar_spin_start": 0.65,
+        "bar_spin_duration": 0.55,
+        "bar_spin_duration_five": 0.8,
+        "icon_flash_count": 2,
+        "icon_flash_hold_duration": 0.06
+      }
+    },
+    {
+      "id": "00039",
+      "skin": "reaver",
+      "name": "Reaver",
+      "source_zip_folder": "D:/Download/ke",
+      "source_page": "https://kingdomarchives.com/killbanners?banner=reaver",
+      "layers": {
+        "data-frame": "https://kingdomarchives.com/uploads/killbanners/reaver/reaver_frame.png",
+        "data-pip": "https://kingdomarchives.com/uploads/killbanners/reaver/reaver_pip.png",
+        "data-circle": "https://kingdomarchives.com/uploads/killbanners/reaver/reaver_ring.png",
+        "data-emblem": "https://kingdomarchives.com/uploads/killbanners/reaver/reaver_emblem.png",
+        "data-headshot": "https://kingdomarchives.com/uploads/killbanners/default/Default_HS.png"
+      },
+      "recovered_pngs": [
+        "reaver_3_kills.png"
+      ],
+      "sound_tiers": 6,
+      "animation": "GD656 ValorantIconRenderer with separate per-skin motion profiles; approximated from Riot upgrade videos",
+      "motion": {
+        "icon_entry_offset_y": 0,
+        "icon_entry_duration": 0.18,
+        "icon_display_duration": 2.8,
+        "frame_entry_delay": 0.08,
+        "frame_entry_duration": 0.22,
+        "frame_entry_initial_scale": 0.78,
+        "emblem_entry_duration": 0.22,
+        "emblem_entry_initial_scale": 1.55,
+        "bar_entry_duration": 0.22,
+        "bar_bounce_distance": 6,
+        "bar_bounce_peak": 0.2,
+        "bar_bounce_hold": 0.28,
+        "bar_bounce_end": 0.62,
+        "bar_spin_start": 0.85,
+        "bar_spin_duration": 0.9,
+        "bar_spin_duration_five": 1.15,
+        "icon_flash_count": 1,
+        "icon_flash_hold_duration": 0.09
+      }
+    },
+    {
+      "id": "00040",
+      "skin": "forsaken",
+      "name": "Forsaken",
+      "source_zip_folder": "D:/Download/ke",
+      "source_page": "https://kingdomarchives.com/killbanners?banner=forsaken",
+      "layers": {
+        "data-frame": "https://kingdomarchives.com/uploads/killbanners/forsaken/forsaken_frame.png",
+        "data-pip": "https://kingdomarchives.com/uploads/killbanners/forsaken/forsaken_pip.png",
+        "data-circle": "https://kingdomarchives.com/uploads/killbanners/forsaken/forsaken_ring.png",
+        "data-emblem": "https://kingdomarchives.com/uploads/killbanners/forsaken/forsaken_emblem.png",
+        "data-headshot": "https://kingdomarchives.com/uploads/killbanners/default/Default_HS.png"
+      },
+      "recovered_pngs": [],
+      "sound_tiers": 6,
+      "animation": "GD656 ValorantIconRenderer with separate per-skin motion profiles; approximated from Riot upgrade videos",
+      "motion": {
+        "icon_entry_offset_y": -5,
+        "icon_entry_duration": 0.16,
+        "icon_display_duration": 2.6,
+        "frame_entry_delay": 0.04,
+        "frame_entry_duration": 0.18,
+        "frame_entry_initial_scale": 0.84,
+        "emblem_entry_duration": 0.2,
+        "emblem_entry_initial_scale": 1.3,
+        "bar_entry_duration": 0.18,
+        "bar_bounce_distance": 7,
+        "bar_bounce_peak": 0.18,
+        "bar_bounce_hold": 0.26,
+        "bar_bounce_end": 0.6,
+        "bar_spin_start": 0.75,
+        "bar_spin_duration": 0.8,
+        "bar_spin_duration_five": 1.0,
+        "icon_flash_count": 2,
+        "icon_flash_hold_duration": 0.07
+      }
+    },
+    {
+      "id": "00041",
+      "skin": "mystbloom",
+      "name": "Mystbloom",
+      "source_zip_folder": "D:/Download/ke",
+      "source_page": "https://kingdomarchives.com/killbanners?banner=mystbloom",
+      "layers": {
+        "data-frame": "https://kingdomarchives.com/uploads/killbanners/mystbloom/mystbloom_frame.png",
+        "data-pip": "https://kingdomarchives.com/uploads/killbanners/mystbloom/mystbloom_pip.png",
+        "data-circle": "https://kingdomarchives.com/uploads/killbanners/mystbloom/mystbloom_ring.png",
+        "data-emblem": "https://kingdomarchives.com/uploads/killbanners/mystbloom/mystbloom_emblem.png",
+        "data-headshot": "https://kingdomarchives.com/uploads/killbanners/default/Default_HS.png"
+      },
+      "recovered_pngs": [],
+      "sound_tiers": 6,
+      "animation": "GD656 ValorantIconRenderer with separate per-skin motion profiles; approximated from Riot upgrade videos",
+      "motion": {
+        "icon_entry_offset_y": -2,
+        "icon_entry_duration": 0.18,
+        "icon_display_duration": 3.0,
+        "frame_entry_delay": 0.02,
+        "frame_entry_duration": 0.26,
+        "frame_entry_initial_scale": 0.88,
+        "emblem_entry_duration": 0.3,
+        "emblem_entry_initial_scale": 1.35,
+        "bar_entry_duration": 0.24,
+        "bar_bounce_distance": 7,
+        "bar_bounce_peak": 0.22,
+        "bar_bounce_hold": 0.3,
+        "bar_bounce_end": 0.68,
+        "bar_spin_start": 0.7,
+        "bar_spin_duration": 0.9,
+        "bar_spin_duration_five": 1.1,
+        "icon_flash_count": 2,
+        "icon_flash_hold_duration": 0.08
+      }
+    }
+  ],
+  "video_references": [
+    {
+      "name": "Forsaken Vandal",
+      "uuid": "437307c6-424c-6a48-9738-949b91166353",
+      "levels": [
+        {
+          "name": "Forsaken Vandal",
+          "levelItem": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/b785acbe-4c0b-a603-788f-6bac0184de67_default_universal.mp4"
+        },
+        {
+          "name": "Forsaken Vandal Level 2",
+          "levelItem": "EEquippableSkinLevelItem::VFX",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/99b2d177-4fbe-d72c-58d7-e3a64036154b_default_universal.mp4"
+        },
+        {
+          "name": "Forsaken Vandal Level 3",
+          "levelItem": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/094abe84-4667-403b-f11a-3e80f45a6c0e_default_universal.mp4"
+        },
+        {
+          "name": "Forsaken Vandal Level 4",
+          "levelItem": "EEquippableSkinLevelItem::Finisher",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/ed8f7031-42d2-3eac-75c4-4fac5a8096b5_default_universal.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Reaver Vandal",
+      "uuid": "30388628-42f0-606c-82c0-73ad43de997f",
+      "levels": [
+        {
+          "name": "Reaver Vandal",
+          "levelItem": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/a6ee2555-4e3a-049e-916a-7ca853dd4568_default_universal.mp4"
+        },
+        {
+          "name": "Reaver Vandal Level 2",
+          "levelItem": "EEquippableSkinLevelItem::VFX",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/78146b6e-49fc-115d-995e-309c5f18e3fd_default_universal.mp4"
+        },
+        {
+          "name": "Reaver Vandal Level 3",
+          "levelItem": "EEquippableSkinLevelItem::Animation",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/b21243ec-4cf0-37c0-43b4-15bf84de9d1d_default_universal.mp4"
+        },
+        {
+          "name": "Reaver Vandal Level 4",
+          "levelItem": "EEquippableSkinLevelItem::Finisher",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/d262fccc-465a-2da6-74ac-049ef3b3f759_default_universal.mp4"
+        }
+      ]
+    },
+    {
+      "name": "CYRAX Vandal",
+      "uuid": "e06fd704-4171-b5ea-5028-d3befb62107d",
+      "levels": [
+        {
+          "name": "CYRAX Vandal",
+          "levelItem": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/08e81004-4e89-3615-dede-d88bd2dcb5ac_default_universal.mp4"
+        },
+        {
+          "name": "CYRAX Vandal Level 2",
+          "levelItem": "EEquippableSkinLevelItem::SoundEffects",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/46753839-4597-12c3-b13c-9586c62df715_default_universal.mp4"
+        },
+        {
+          "name": "CYRAX Vandal Level 3",
+          "levelItem": "EEquippableSkinLevelItem::Animation",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/037869ee-443c-1d4c-058e-2089881db78d_default_universal.mp4"
+        },
+        {
+          "name": "CYRAX Vandal Level 4",
+          "levelItem": "EEquippableSkinLevelItem::Finisher",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/d28e5474-415e-6cd6-5fb7-ef8c68869f6e_default_universal.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Mystbloom Phantom",
+      "uuid": "ce85f078-474a-eae4-3844-03a49625df15",
+      "levels": [
+        {
+          "name": "Mystbloom Phantom",
+          "levelItem": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/f358f6d8-4b58-b21f-9c45-039c17d374cf_default_universal.mp4"
+        },
+        {
+          "name": "Mystbloom Phantom Level 2",
+          "levelItem": "EEquippableSkinLevelItem::SoundEffects",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7b940e3e-4f98-770e-de5b-db83c339c131_default_universal.mp4"
+        },
+        {
+          "name": "Mystbloom Phantom Level 3",
+          "levelItem": "EEquippableSkinLevelItem::Animation",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7a78e06d-4259-c3d6-e0e2-d4925fc7b8c5_default_universal.mp4"
+        },
+        {
+          "name": "Mystbloom Phantom Level 4",
+          "levelItem": "EEquippableSkinLevelItem::Finisher",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7334920e-46b7-967e-b8b9-f29fd22e40e2_default_universal.mp4"
+        }
+      ]
+    }
+  ]
+}

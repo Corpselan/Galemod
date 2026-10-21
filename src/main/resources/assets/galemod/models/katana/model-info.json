@@ -1,0 +1,29 @@
+{
+  "source_sha256": "623d3281bac1e7aa6c7008da40b86067c7cf0b3e34895d929b70826b95d44563",
+  "source_credit": {
+    "author": "gkari (https://sketchfab.com/gkari)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/katana-valorant-draft-73ae18bf62f249f9ba6a3824201ce8b0",
+    "title": "Katana Valorant Draft"
+  },
+  "vertices": 59011,
+  "triangles": 79868,
+  "materials": 11,
+  "changes": [
+    "Separate scabbard omitted (source meshes 5-14)",
+    "Grip aligned and scaled to Minecraft",
+    "Base material colors with emissive eyes; no PBR reflections"
+  ],
+  "bounds": [
+    [
+      -0.06499016686470122,
+      -0.12792243227810415,
+      -0.04344355195143965
+    ],
+    [
+      0.1784504606397486,
+      0.9720775677218958,
+      0.04344352492646384
+    ]
+  ]
+}

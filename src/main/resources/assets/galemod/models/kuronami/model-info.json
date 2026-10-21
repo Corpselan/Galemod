@@ -1,0 +1,117 @@
+{
+  "source_sha256": "bf58eda078a38468f4d5496a79302462921f814bd12b2e78fad38870860ed887",
+  "source_credit": {
+    "author": "KiLLSHOT (https://sketchfab.com/killshotttttt)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/kuronami-bundle-30e131c08e484ec1896900bde1b5b5ad",
+    "title": "KURONAMI BUNDLE"
+  },
+  "models": {
+    "Kuronami": {
+      "vertices": 23140,
+      "triangles": 11508,
+      "bounds": [
+        [
+          -0.2782184957113177,
+          -0.4945346863496208,
+          -0.1437033676678058
+        ],
+        [
+          0.18752011109867303,
+          0.4554653136503792,
+          0.18938136613178022
+        ]
+      ],
+      "atlas": [
+        1024,
+        1032
+      ]
+    },
+    "Vandal": {
+      "vertices": 12108,
+      "triangles": 13793,
+      "bounds": [
+        [
+          -0.050725339177853296,
+          -0.12016790312486585,
+          -0.7617520064844933
+        ],
+        [
+          0.03438373073428458,
+          0.19556687644772555,
+          0.38824799351550654
+        ]
+      ],
+      "atlas": [
+        1024,
+        1032
+      ]
+    },
+    "Sheriff": {
+      "vertices": 3729,
+      "triangles": 4049,
+      "bounds": [
+        [
+          -0.03761540769444152,
+          -0.10144737681396537,
+          -0.4500018193428464
+        ],
+        [
+          0.037604655610047104,
+          0.20426191621576473,
+          0.06999818065715367
+        ]
+      ],
+      "atlas": [
+        1024,
+        1032
+      ]
+    },
+    "Marshal": {
+      "vertices": 8076,
+      "triangles": 8661,
+      "bounds": [
+        [
+          -0.03444198430497273,
+          -0.07716348072289521,
+          -1.0409945291347065
+        ],
+        [
+          0.03375342332259213,
+          0.2032361610744892,
+          0.4090054708652933
+        ]
+      ],
+      "atlas": [
+        2048,
+        1032
+      ]
+    },
+    "Spectre": {
+      "vertices": 10650,
+      "triangles": 11475,
+      "bounds": [
+        [
+          -0.052239516762793564,
+          -0.1666920125536149,
+          -0.5427772858657092
+        ],
+        [
+          0.05223933894697919,
+          0.1933859326167162,
+          0.3272227141342909
+        ]
+      ],
+      "atlas": [
+        1024,
+        1032
+      ]
+    }
+  },
+  "notes": [
+    "Static presentation geometry; no source animations supplied",
+    "Base-color textures capped at 1024px, atlas cached once per selected model",
+    "Water shader surfaces use blue material approximation; PBR and source water simulation omitted",
+    "Kuronami retains both blades and connecting chain as one static object"
+  ]
+}

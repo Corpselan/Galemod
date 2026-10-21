@@ -1,0 +1,165 @@
+{
+  "source": "https://kingdomarchives.com/killbanners?banner=ayakashi",
+  "banner": {
+    "id": "banner",
+    "data-headshot-x": "-0.3",
+    "data-headshot-y": "-18.5",
+    "data-radius": "170",
+    "data-frame": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_frame.png",
+    "data-pip": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_pip.png",
+    "data-circle": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_ring.png",
+    "data-emblem": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_emblem.png",
+    "data-pip-v1": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_pip_v1.png",
+    "data-emblem-v1": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_emblem_v1.png",
+    "data-pip-v2": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_pip_v2.png",
+    "data-emblem-v2": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_emblem_v2.png",
+    "data-pip-v3": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_pip_v3.png",
+    "data-emblem-v3": "https://kingdomarchives.com/uploads/killbanners/ayakashi/ayakashi_emblem_v3.png",
+    "data-type": "Default",
+    "data-headshot": "https://kingdomarchives.com/uploads/killbanners/default/Default_HS.png"
+  },
+  "audio": [
+    {
+      "preload": "none",
+      "id": "audio-1",
+      "src": "https://kingdomarchives.com/uploads/killbanners/ayakashi/audios/ayakashi_1.mp3",
+      "x-init": "$el.volume = 0.1"
+    },
+    {
+      "preload": "none",
+      "id": "audio-2",
+      "src": "https://kingdomarchives.com/uploads/killbanners/ayakashi/audios/ayakashi_2.mp3",
+      "x-init": "$el.volume = 0.1"
+    },
+    {
+      "preload": "none",
+      "id": "audio-3",
+      "src": "https://kingdomarchives.com/uploads/killbanners/ayakashi/audios/ayakashi_3.mp3",
+      "x-init": "$el.volume = 0.1"
+    },
+    {
+      "preload": "none",
+      "id": "audio-4",
+      "src": "https://kingdomarchives.com/uploads/killbanners/ayakashi/audios/ayakashi_4.mp3",
+      "x-init": "$el.volume = 0.1"
+    },
+    {
+      "preload": "none",
+      "id": "audio-5",
+      "src": "https://kingdomarchives.com/uploads/killbanners/ayakashi/audios/ayakashi_5.mp3",
+      "x-init": "$el.volume = 0.1"
+    },
+    {
+      "preload": "none",
+      "id": "audio-6",
+      "src": "https://kingdomarchives.com/uploads/killbanners/ayakashi/audios/ayakashi_6.mp3",
+      "x-init": "$el.volume = 0.1"
+    }
+  ],
+  "preset_id": "00042",
+  "style": "ke_ayakashi",
+  "motion": {
+    "icon_entry_offset_y": 0,
+    "icon_entry_duration": 0.1,
+    "icon_display_duration": 2.8,
+    "frame_entry_delay": 0.07,
+    "frame_entry_duration": 0.2,
+    "frame_entry_initial_scale": 0.8,
+    "emblem_entry_duration": 0.34,
+    "emblem_entry_initial_scale": 0.42,
+    "emblem_entry_peak_scale": 1.25,
+    "emblem_entry_peak_time": 0.09,
+    "bar_entry_delay": 0.1,
+    "bar_entry_duration": 0.22,
+    "bar_entry_initial_scale": 1.18,
+    "bar_bounce_distance": 2.5,
+    "bar_bounce_peak": 0.23,
+    "bar_bounce_hold": 0.28,
+    "bar_bounce_end": 0.52,
+    "bar_layout": "fox_fan",
+    "bar_spin_degrees": 0,
+    "bar_spin_degrees_five": 0,
+    "icon_flash_count": 2,
+    "icon_flash_hold_duration": 0.09,
+    "five_plus_fade_in_duration": 0.1,
+    "bar_orientation_scale": 0.65
+  },
+  "tail": "Reconstructed from Riot Ghost upgrade video using built-in imagegen; original website pip files are transparent 1x1 placeholders. Approximation, not an extracted original texture.",
+  "tail_source_image": "exec-b23ee686-5131-4eda-9848-0c767f34aff2.png",
+  "video_references": [
+    {
+      "name": "Ayakashi Phantom",
+      "uuid": "c1b96274-4346-2ea4-65f4-ec957d217922",
+      "levels": [
+        {
+          "name": "Ayakashi Phantom",
+          "item": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7f42e2f5-425e-6bbc-3a4b-d78e2de2aebf_default_universal.mp4"
+        },
+        {
+          "name": "Ayakashi Phantom Level 2",
+          "item": "EEquippableSkinLevelItem::SoundEffects",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/4804775a-45a0-9f96-79e4-178a94e45b9e_default_universal.mp4"
+        },
+        {
+          "name": "Ayakashi Phantom Level 3",
+          "item": "EEquippableSkinLevelItem::Animation",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/b13eec89-46c2-4134-f9ec-5f8e2edf6550_default_universal.mp4"
+        },
+        {
+          "name": "Ayakashi Phantom Level 4",
+          "item": "EEquippableSkinLevelItem::Finisher",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/7b060d2a-4137-c8b8-0068-9590ee477632_default_universal.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Ayakashi Ghost",
+      "uuid": "a9d11586-488a-c93e-c3cc-1ca5d9b6faa9",
+      "levels": [
+        {
+          "name": "Ayakashi Ghost",
+          "item": null,
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/bb2a9fc8-4868-7b4d-8bcf-6ca46cd40b68_default_universal.mp4"
+        },
+        {
+          "name": "Ayakashi Ghost Level 2",
+          "item": "EEquippableSkinLevelItem::SoundEffects",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/1246577f-49f1-7910-d4e8-f89405848f6c_default_universal.mp4"
+        },
+        {
+          "name": "Ayakashi Ghost Level 3",
+          "item": "EEquippableSkinLevelItem::Animation",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/d54a2541-49f1-524c-a638-05b69ea855dd_default_universal.mp4"
+        },
+        {
+          "name": "Ayakashi Ghost Level 4",
+          "item": "EEquippableSkinLevelItem::Finisher",
+          "video": "https://valorant.dyn.riotcdn.net/x/videos/release-13.08/53ba42bf-4f02-c9b7-a745-7c8c256878ff_default_universal.mp4"
+        }
+      ]
+    }
+  ],
+  "six_kill_revision": {
+    "reference": "User screenshot codex-clipboard-27fc9e31-ad6a-4a8c-985e-21eaa3c4d9f3.png",
+    "layout_degrees": [
+      -55,
+      55,
+      -90,
+      90,
+      -125,
+      125
+    ],
+    "tail_texture": "killicon_ke_ayakashi_bar_six.png",
+    "tail_source": "User reference reconstructed using built-in imagegen; approximate artwork, not an original extracted texture.",
+    "orientation_scale": 0.55,
+    "source_radius": 112,
+    "first_five_tiers": "Original textures and layouts unchanged",
+    "orientation_origin": 90,
+    "source_image": "exec-91f06bbf-2bdb-4982-905a-6bfb002b8384.png",
+    "source_tail_size": [
+      78,
+      62
+    ]
+  }
+}

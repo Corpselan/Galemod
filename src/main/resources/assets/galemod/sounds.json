@@ -1,0 +1,164 @@
+{
+  "kill.champions21.1": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions21_1",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions21.2": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions21_2",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions21.3": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions21_3",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions21.4": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions21_4",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions21.5": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions21_5",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions21.6": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions21_6",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions23.1": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions23_1",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions23.2": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions23_2",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions23.3": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions23_3",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions23.4": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions23_4",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions23.5": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions23_5",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions23.6": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions23_6",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions24.1": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions24_1",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions24.2": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions24_2",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions24.3": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions24_3",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions24.4": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions24_4",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions24.5": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions24_5",
+        "stream": false
+      }
+    ]
+  },
+  "kill.champions24.6": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "galemod:kill/champions24_6",
+        "stream": false
+      }
+    ]
+  }
+}

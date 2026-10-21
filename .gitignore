@@ -1,0 +1,33 @@
+# Generated output and dependency caches
+/.gradle/
+/build/
+/bin/
+/out/
+
+# Local Minecraft instances: configs, credentials, worlds, logs, screenshots
+/run/
+/run-*/
+/logs/
+/crash-reports/
+
+# Editor and operating-system files
+/.idea/
+/.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local environment and compiled helper files
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.class
+*.log
+*.tmp
+*.jks
+*.keystore
+
+# Keep Gradle Wrapper binaries tracked; do not ignore all *.jar files.

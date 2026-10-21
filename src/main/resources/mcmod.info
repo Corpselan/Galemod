@@ -1,0 +1,8 @@
+[{
+  "modid": "galemod",
+  "name": "GaleMod",
+  "description": "A client mod that works next to other clients and fills in what they miss.",
+  "version": "${version}",
+  "mcversion": "1.8.9",
+  "authorList": []
+}]
