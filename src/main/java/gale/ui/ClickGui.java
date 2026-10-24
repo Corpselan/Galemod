@@ -252,7 +252,7 @@ public final class ClickGui extends GuiScreen {
         Skin.box(bx, by, 60, 20, false, over(bx, by, 60, 20));
         Skin.text("配置", bx + (60 - Skin.width("配置")) / 2f, by + 6, Skin.TEXT);
         hit(Kind.CONFIG, null, 0, bx, by, 60, 20);
-        gale.ui.raven.RavenWatermark.render(4, sh - 12, false);
+        // The mandatory branding block is drawn by the final Forge GUI overlay.
         GlStateManager.enableDepth();
         GlStateManager.popMatrix();
     }

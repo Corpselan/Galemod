@@ -2,6 +2,8 @@ package gale.ui.raven;
 
 import gale.b4port.util.RenderUtils;
 import gale.util.GuiVisibility;
+import gale.security.ReleaseIntegrity;
+import gale.security.WatermarkIdentity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.MathHelper;
@@ -12,19 +14,23 @@ import net.minecraft.util.MathHelper;
  */
 public final class RavenWatermark {
     private static final Minecraft mc = Minecraft.getMinecraft();
-    public static final String USER = "User", USER_ID = String.valueOf(GuiVisibility.LEVEL), EDITION = "galemod premium-beta", DEV = "Corpselan";
+    public static final String USER = WatermarkIdentity.USER, USER_ID = String.valueOf(GuiVisibility.LEVEL),
+        EDITION = WatermarkIdentity.EDITION, DEV = WatermarkIdentity.DEVELOPER;
+    private static final int BRAND_COLOR = 0x3992E5;
 
     private RavenWatermark() { }
 
     public static void render(int x, int y, boolean animate) {
+        ReleaseIntegrity.assertTrustedClass(RavenWatermark.class);
+        ReleaseIntegrity.Identity identity = ReleaseIntegrity.assertWatermark(USER, USER_ID, EDITION, DEV);
         FontRenderer fr = mc.fontRendererObj;
         int cx = x;
-        int color = RavenStyle.watermarkColor.rgb;
-        fr.drawStringWithShadow("welcome, ", (float) cx, (float) (y - 20), color);
-        int end = rainbowText(USER, cx += 45, y - 20, fr);
-        fr.drawStringWithShadow(" #" + USER_ID, (float) end, (float) (y - 20), color);
-        fr.drawStringWithShadow(EDITION, (float) x, (float) (y - 10), color);
-        scramble("dev. ", DEV, x, y, animate, fr);
+        int color = BRAND_COLOR;
+        fr.drawStringWithShadow(identity.welcome, (float) cx, (float) (y - 20), color);
+        int end = rainbowText(identity.user, cx += fr.getStringWidth(identity.welcome), y - 20, fr);
+        fr.drawStringWithShadow(" #" + identity.userId, (float) end, (float) (y - 20), color);
+        fr.drawStringWithShadow(identity.edition, (float) x, (float) (y - 10), color);
+        scramble(identity.developerPrefix, identity.developer, x, y, false, fr);
     }
 
     private static int rainbowText(String s, int x, int y, FontRenderer fr) {
@@ -43,7 +49,7 @@ public final class RavenWatermark {
 
     private static void scramble(String prefix, String name, float x, float y, boolean animate, FontRenderer fr) {
         long now = System.currentTimeMillis();
-        int base = RavenStyle.watermarkColor.rgb;
+        int base = BRAND_COLOR;
         fr.drawStringWithShadow(prefix, x, y, base);
         float cx = x + (float) fr.getStringWidth(prefix);
         long since = now - RavenGui.openedAt;

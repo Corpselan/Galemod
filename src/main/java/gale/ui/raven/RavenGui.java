@@ -138,8 +138,7 @@ public class RavenGui extends GuiScreen {
             GuiInventory.drawEntityOnScreen(this.width + 15 - this.backgroundAnimation.getValueInt(0, 40, 2), this.height - 10, 40,
                 (float) (this.width - 25 - x), (float) (this.height - 50 - y), this.mc.thePlayer);
         }
-        int wy = this.height + 18 - this.watermarkAnimation.getValueInt(0, 30, 2);
-        RavenWatermark.render(4, wy, true);
+        // Mandatory branding is drawn after this screen, independent of the opening animation.
         configButton.drawButton(mc, x, y);
     }
 

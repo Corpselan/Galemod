@@ -56,7 +56,10 @@ public final class Gale {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        gale.security.ReleaseIntegrity.assertTrustedClass(Gale.class);
         Hooks.install();
+        gale.ui.raven.MandatoryWatermarkOverlay.install();
+        gale.security.RuntimeIntegrityGuard.install();
         // the HUD's layout: with the chat open, HUD elements can be moved and resized (galemod/hud.json)
         gale.hud.HudLayout.install();
         // the framework's own modules; feature modules get registered here as they are written

@@ -31,3 +31,14 @@ __pycache__/
 *.keystore
 
 # Keep Gradle Wrapper binaries tracked; do not ignore all *.jar files.
+
+# Private signing material and external obfuscator; public watermark.sig stays tracked
+.galemod-signing/
+*.p12
+*.pfx
+*.pem
+*.key
+store-password.txt
+*.permit
+/ZKM*.jar
+/zkm*.jar

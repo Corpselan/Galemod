@@ -1,3 +1,5 @@
+import java.io.File
+
 plugins {
     java
     id("gg.essential.loom") version "1.7.35"
@@ -81,14 +83,15 @@ tasks.jar { exclude("gale/devtest/**", "gale/example/**") }
 tasks.shadowJar {
     configurations = listOf(shade)
     archiveClassifier.set("dev-shadow")
-    exclude("gale/devtest/**", "gale/example/**", "META-INF/maven/**", "module-info.class")
+    exclude("gale/devtest/**", "gale/example/**", "META-INF/maven/**", "module-info.class",
+        "META-INF/*.SF", "META-INF/*.RSA", "META-INF/*.DSA", "META-INF/*.EC")
     relocate("javazoom.jl", "gale.lib.jlayer")
     relocate("com.google.zxing", "gale.lib.zxing")
 }
 
 tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar") {
     inputFile.set(tasks.shadowJar.flatMap { it.archiveFile })
-    archiveFileName.set("GaleMod-${project.version}.jar")
+    archiveFileName.set("GaleMod-${project.version}-unsigned.jar")
 }
 
 // Minecraft 1.8.9 starts on Java 8; Gradle itself runs on a newer JDK.
@@ -157,4 +160,98 @@ tasks.register<JavaExec>("neteaseCoreTest") {
     classpath = sourceSets.main.get().runtimeClasspath
     mainClass.set("gale.devtest.NeteaseCoreTest")
     javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+}
+
+
+// Sign only the final remapped artifact. Keys are external; nothing secret is stored in the project.
+val officialReleaseJar = layout.buildDirectory.file("libs/GaleMod-${project.version}.jar")
+val signReleaseJar = tasks.register<JavaExec>("signReleaseJar") {
+    dependsOn("remapJar")
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    inputs.file(tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar").flatMap { it.archiveFile })
+    outputs.file(officialReleaseJar)
+    outputs.upToDateWhen { false }
+    doFirst {
+        val keyDirectory = providers.gradleProperty("galeSigningDir").orNull
+            ?: File(System.getProperty("user.home"), ".galemod-signing").absolutePath
+        setArgs(listOf(tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar").get().archiveFile.get().asFile.absolutePath,
+            officialReleaseJar.get().asFile.absolutePath, keyDirectory))
+    }
+}
+tasks.named("assemble") { dependsOn(signReleaseJar) }
+
+tasks.register<JavaExec>("verifyReleaseJar") {
+    dependsOn(signReleaseJar)
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    args(officialReleaseJar.get().asFile.absolutePath)
+}
+
+
+// The signed watermark permission is public. Unchanged watermarks can be built without a private key.
+val watermarkToolClasspath = files(tasks.compileJava.get().destinationDirectory) + configurations.runtimeClasspath.get()
+tasks.register<JavaExec>("verifyWatermarkAuthorization") {
+    dependsOn(tasks.compileJava)
+    classpath = watermarkToolClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    args("--check-watermark", layout.projectDirectory.dir("src/main/resources").asFile.absolutePath)
+}
+tasks.processResources { dependsOn("verifyWatermarkAuthorization") }
+tasks.register<JavaExec>("authorizeWatermark") {
+    dependsOn(tasks.compileJava)
+    classpath = watermarkToolClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    doFirst {
+        val keyDirectory = providers.gradleProperty("galeSigningDir").orNull
+            ?: File(System.getProperty("user.home"), ".galemod-signing").absolutePath
+        setArgs(listOf("--authorize-watermark", layout.projectDirectory.dir("src/main/resources").asFile.absolutePath, keyDirectory))
+    }
+}
+val prepareWatermarkDevelopment = tasks.register<JavaExec>("prepareWatermarkDevelopment") {
+    dependsOn(tasks.classes)
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    args("--dev-check", tasks.compileJava.get().destinationDirectory.get().asFile.absolutePath)
+}
+tasks.named<JavaExec>("runClient") { dependsOn(prepareWatermarkDevelopment) }
+
+// Catch LaunchWrapper-specific origins in both development and packaged code without starting the game.
+val verifyForgeOrigins = tasks.register<JavaExec>("verifyForgeOrigins") {
+    dependsOn(signReleaseJar, tasks.classes)
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("gale.devtest.ForgeOriginTest")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    args(tasks.compileJava.get().destinationDirectory.get().asFile.absolutePath, officialReleaseJar.get().asFile.absolutePath)
+}
+tasks.named("check") { dependsOn(verifyForgeOrigins) }
+
+// Verification is already transformed in the Java sources; no external obfuscator is needed.
+tasks.register<JavaExec>("verifyProtectionSources") {
+    dependsOn(tasks.compileJava)
+    classpath = watermarkToolClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    args("--check-protection", layout.projectDirectory.asFile.absolutePath)
+}
+tasks.processResources {
+    dependsOn("verifyProtectionSources")
+    mustRunAfter("authorizeProtection", "authorizeWatermark")
+}
+
+tasks.register<JavaExec>("authorizeProtection") {
+    dependsOn(tasks.compileJava)
+    classpath = watermarkToolClasspath
+    mainClass.set("gale.devtest.ReleaseSigningTool")
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(8)) })
+    doFirst {
+        val keyDirectory = providers.gradleProperty("galeSigningDir").orNull
+            ?: File(System.getProperty("user.home"), ".galemod-signing").absolutePath
+        setArgs(listOf("--authorize-protection", layout.projectDirectory.asFile.absolutePath, keyDirectory))
+    }
 }

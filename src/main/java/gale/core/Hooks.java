@@ -73,6 +73,7 @@ public final class Hooks {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onClientTick(net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent e) {
         if (e.phase == net.minecraftforge.fml.common.gameevent.TickEvent.Phase.START) {
+            gale.security.ReleaseIntegrity.requireVerified();
             // before the game's "right click is up: stop using the item" check later in this tick
             FakeUse.tickStart();
             Scheduler.tick();
