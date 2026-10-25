@@ -1,0 +1,12 @@
+1.使用1.8.9forge启动
+2.最好使用ravenb4客户端，如果你没有，请使用openb4
+3.使用killeffect功能时请注意把hypixel语言调成英文，游戏语言也调成英文
+4.不要使用里面的外挂功能（模块栏前两个），都是没有绕过的
+5.不要拿这个mod去碰瓷任何东西，user的行为与开发者无关
+-----------------------------------------
+我们的bilibili：
+Gale：https://space.bilibili.com/1000196984/dynamic
+https://space.bilibili.com/3632301323848293/dynamic
+https://space.bilibili.com/1985513577/dynamic
+Corpselan：https://space.bilibili.com/3707051962272052/dynamic
+我们的dc服务器：https://discord.com/invite/abHKstMPz
